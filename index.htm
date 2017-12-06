@@ -88,11 +88,13 @@ body {
         src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
         width="156" height="32" />
  </a>
-
+<br>
+<a href id="Logout">Logout</a>
+<input type="text" size="256" placeholder="Client secret" id="client_secret">
 <script type="text/javascript">
     window.onload = function() {
     document.getElementById('LoginWithAmazon').onclick = function() {
-    options = { scope : 'profile' };
+    options = { scope : 'profile', 'response_type': 'code' };
     amazon.Login.authorize(options,
         'https://ab-mob.github.io/?login');
     return false;
