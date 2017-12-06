@@ -83,12 +83,14 @@ body {
 
 </script>
 <script type="text/javascript">
+    window.onload = function() {
     document.getElementById('LoginWithAmazon').onclick = function() {
     options = { scope : 'profile' };
     amazon.Login.authorize(options,
         'https://ab-mob.github.io/?login');
     return false;
     };
+    }
 </script>
     </div>
 
