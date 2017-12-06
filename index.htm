@@ -65,6 +65,32 @@ body {
       </div>
 
     </main><!-- /.container -->
+    
+    <div class="container">
+        <h2>Login with Amazon</h2>
+        <div id="amazon-root"></div>
+ <script type="text/javascript">
+
+    window.onAmazonLoginReady = function() {
+      amazon.Login.setClientId('amzn1.application-oa2-client.db4450616d5742f6b1328c8590606982');
+    };
+    (function(d) {
+      var a = d.createElement('script'); a.type = 'text/javascript';
+      a.async = true; a.id = 'amazon-login-sdk';
+      a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+      d.getElementById('amazon-root').appendChild(a);
+    })(document);
+
+</script>
+<script type="text/javascript">
+    document.getElementById('LoginWithAmazon').onclick = function() {
+    options = { scope : 'profile' };
+    amazon.Login.authorize(options,
+        'https://ab-mob.github.io/?login');
+    return false;
+    };
+</script>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
