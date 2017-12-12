@@ -73,7 +73,7 @@ body {
 
     window.onAmazonLoginReady = function() {
       console.log('onAmazonLoginReady');
-      amazon.Login.setClientId('amzn1.application-oa2-client.7a8592af528d43f68b7dd8ab4768bbaf');
+      amazon.Login.setClientId('amzn1.application-oa2-client.db4450616d5742f6b1328c8590606982');
     };
     (function(d) {
       var a = d.createElement('script'); a.type = 'text/javascript';
@@ -94,7 +94,7 @@ body {
 <script type="text/javascript">
     window.onload = function() {
     document.getElementById('LoginWithAmazon').onclick = function() {
-    options = { scope : 'alexa:all', 'response_type': 'code', 'redirect_uri': 'https://ab-mob.github.io/?login' };
+    options = { scope : 'alexa:all', scope_data: '{"productID": "Synergy_SK_Alexa_V1_0", "productInstanceAttributes": {"deviceSerialNumber": "901oicn3843ij34157"}}', 'response_type': 'code', 'redirect_uri': 'https://ab-mob.github.io/?login' };
     amazon.Login.authorize(options, function(res) {
         console.log('response:');
         console.log(res);
