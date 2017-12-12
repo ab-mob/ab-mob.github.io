@@ -104,7 +104,7 @@ body {
         }
     }
     
-    scope_data_str = JSON.stringify(scope_data)
+    scope_data_str = '"' + JSON.stringify(scope_data) + '"'
     
     options = {
         scope: 'alexa:all',
