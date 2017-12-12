@@ -94,7 +94,7 @@ body {
 <script type="text/javascript">
     window.onload = function() {
     document.getElementById('LoginWithAmazon').onclick = function() {
-    options = { scope : 'profile', 'response_type': 'code', 'redirect_uri': 'https://ab-mob.github.io/?login' };
+    options = { scope : 'alexa:all', 'response_type': 'code', 'redirect_uri': 'https://ab-mob.github.io/?login' };
     amazon.Login.authorize(options, function(res) {
         console.log('response:');
         console.log(res);
