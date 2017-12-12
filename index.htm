@@ -94,7 +94,24 @@ body {
 <script type="text/javascript">
     window.onload = function() {
     document.getElementById('LoginWithAmazon').onclick = function() {
-    options = { scope : 'alexa:all', scope_data: '{"productID": "Synergy_SK_Alexa_V1_0", "productInstanceAttributes": {"deviceSerialNumber": "901oicn3843ij34157"}}', 'response_type': 'code', 'redirect_uri': 'https://ab-mob.github.io/?login' };
+    
+    scope_data = {
+        "alexa:all": {
+            "productID": "Synergy_SK_Alexa_V1_0",
+            "productInstanceAttributes": {
+                "deviceSerialNumber": "901oicn3843ij34157"
+            }
+        }
+    }
+    
+    scope_data_str = JSON.stringify(scope_data)
+    
+    options = {
+        scope: 'alexa:all',
+        scope_data: scope_data_str,
+        response_type: 'code',
+        redirect_uri: 'https://ab-mob.github.io/?login'
+    };
     amazon.Login.authorize(options, function(res) {
         console.log('response:');
         console.log(res);
