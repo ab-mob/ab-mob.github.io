@@ -104,11 +104,11 @@ body {
         }
     }
     
-    scope_data_str = encodeURIComponent('{"alexa:all":{"productID":"Synergy_SK_Alexa_V1_0","productInstanceAttributes":{"deviceSerialNumber":"S7G2-PE-HMI1"}}}')
+    //scope_data_str = encodeURIComponent('{"alexa:all":{"productID":"Synergy_SK_Alexa_V1_0","productInstanceAttributes":{"deviceSerialNumber":"S7G2-PE-HMI1"}}}')
     
     options = {
         scope: 'alexa:all',
-        scope_data: scope_data_str,
+        scope_data: scope_data,
         response_type: 'code',
         redirect_uri: 'https://ab-mob.github.io/?login'
     };
